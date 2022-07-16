@@ -111,7 +111,7 @@ const typeDefs = gql`
 		newTravel(input:TravelInput):Travel
 	}
 	type Mutation {
-		newPRoduct(input:TravelInput):Product
+		newProduct(input:TravelInput):Product
 	}
 	type Mutation {
 		newTix(input:TixInput):Tix
