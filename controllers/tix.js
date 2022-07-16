@@ -7,7 +7,7 @@ async function getTixsByStatus(status){
    .where({status})
    .sort({createdAt: -1})
    ;
-   return travels;
+   return tixs;
 }
 
 async function newTix(input){
