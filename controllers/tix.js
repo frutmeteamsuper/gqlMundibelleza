@@ -21,7 +21,7 @@ async function newTix(input){
         rateType, 
         currency, 
         status
-    }=newTravel;
+    }=newTix;
 
     try{
         const tix = new Tix(newTix);
