@@ -53,6 +53,16 @@ const typeDefs = gql`
 		currency:String!
 		rateType:String!
 	}
+	input TixInput{
+		client:String!
+		origin:String!
+		distance:String!
+		destin:String!
+		amount:String!
+		status:String!
+		currency:String!
+		rateType:String!
+	}
 
 	input UserInput{
 		name:String!
@@ -71,12 +81,15 @@ const typeDefs = gql`
 		# user
 		getUser: User 
 		getTravelsByStatus(status:String!): [Travel] 
+		getTixsByStatus(status:String!): [Tix] 
 	}
 	
 	type Mutation {
 		newTravel(input:TravelInput):Travel
 	}
-
+	type Mutation {
+		newTix(input:TixInput):Tix
+	}
 
 	type Mutation {
 		register(input:UserInput):User
