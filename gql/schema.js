@@ -12,6 +12,18 @@ const typeDefs = gql`
 		rateType: String
 		currency: String
 	}	
+	type Tix {
+		id: ID
+		client: String
+		origin: String
+		destin: String
+		distance : String
+		amount :  String
+		createdAt: String
+		status: String
+		rateType: String
+		currency: String
+	}	
 	type User {
 		id: ID
 		name: String
