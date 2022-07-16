@@ -23,6 +23,18 @@ const typeDefs = gql`
 		status: String
 		rateType: String
 		currency: String
+	}		
+	type Product {
+		id: ID
+		client: String
+		origin: String
+		destin: String
+		distance : String
+		amount :  String
+		createdAt: String
+		status: String
+		rateType: String
+		currency: String
 	}	
 	type User {
 		id: ID
@@ -44,6 +56,16 @@ const typeDefs = gql`
 		users(role: UserRoleEnum): [User!]!
 	  }
 	input TravelInput{
+		client:String!
+		origin:String!
+		distance:String!
+		destin:String!
+		amount:String!
+		status:String!
+		currency:String!
+		rateType:String!
+	}
+	input ProductInput{
 		client:String!
 		origin:String!
 		distance:String!
@@ -82,10 +104,14 @@ const typeDefs = gql`
 		getUser: User 
 		getTravelsByStatus(status:String!): [Travel] 
 		getTixsByStatus(status:String!): [Tix] 
+		getProductsByStatus(status:String!): [Product] 
 	}
 	
 	type Mutation {
 		newTravel(input:TravelInput):Travel
+	}
+	type Mutation {
+		newPRoduct(input:TravelInput):Product
 	}
 	type Mutation {
 		newTix(input:TixInput):Tix
