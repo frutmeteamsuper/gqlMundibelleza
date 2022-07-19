@@ -1,27 +1,25 @@
 const mongoose = require("mongoose");
 const Schema =mongoose.Schema;
 const ProductSchema= Schema({
-    origin:{
+    name:{
         type:String,
         require:true,
     },
-    destin:{
+    description:{
         type:String,
         require:true,
     },
-    client:{
+    price:{
+        type:Number,
+        require:true,
+    },
+    ref:{
         type:String,
         require:true,
         trim:true,
         unique:true,
     },
-    distance:{
-        type:String,
-        require:true,
-        trim:true,
-        unique:true,
-    },
-    amount:{
+    presentation:{
         type:String,
         trim:true,
     },
@@ -29,7 +27,7 @@ const ProductSchema= Schema({
         type:String,
         trim:true,
     },
-    rateType:{
+    category:{
         type:String,
         trim:true,
     }, 

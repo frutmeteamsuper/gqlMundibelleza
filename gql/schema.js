@@ -26,14 +26,13 @@ const typeDefs = gql`
 	}		
 	type Product {
 		id: ID
-		client: String
-		origin: String
-		destin: String
-		distance : String
-		amount :  String
-		createdAt: String
+		name: String
+		price: Int
+		ref: String 
+		description: String
+		presentation: String
+		category: String
 		status: String
-		rateType: String
 		currency: String
 	}	
 	type User {
@@ -66,14 +65,14 @@ const typeDefs = gql`
 		rateType:String!
 	}
 	input ProductInput{
-		client:String!
-		origin:String!
-		distance:String!
-		destin:String!
-		amount:String!
+		name:String!
+		price:Int!
+		ref:String!
+		description:String!
+		presentation:String!
+		category:String!
 		status:String!
 		currency:String!
-		rateType:String!
 	}
 	input TixInput{
 		client:String!
@@ -111,7 +110,7 @@ const typeDefs = gql`
 		newTravel(input:TravelInput):Travel
 	}
 	type Mutation {
-		newProduct(input:TravelInput):Product
+		newProduct(input:ProductInput):Product
 	}
 	type Mutation {
 		newTix(input:TixInput):Tix
