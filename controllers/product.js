@@ -22,7 +22,8 @@ async function newProduct(input){
         presentation, 
         category, 
         currency, 
-        status
+        status,
+        images
     }=newProduct;
 
     try{

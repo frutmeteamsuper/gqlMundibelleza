@@ -23,6 +23,7 @@ const typeDefs = gql`
 		status: String
 		rateType: String
 		currency: String
+	
 	}		
 	type Product {
 		id: ID
@@ -34,6 +35,7 @@ const typeDefs = gql`
 		category: String
 		status: String
 		currency: String
+		images:[String]
 	}	
 	type User {
 		id: ID

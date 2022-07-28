@@ -35,6 +35,9 @@ const ProductSchema= Schema({
         type:String,
         trim:true,
     },
+    images:{
+        type:[String],
+    },
     createdAt:{
         type:Date,
         default:Date.now(),
