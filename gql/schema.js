@@ -103,7 +103,7 @@ const typeDefs = gql`
 		getUser: User 
 		getTravelsByStatus(status:String!): [Travel] 
 		getTixsByStatus(status:String!): [Tix] 
-		getProductsByStatus(status:String!): [Product] 
+		getProductsByStatus(status:String!,offset:Int,limit:Int): [Product] 
 	}
 	
 	type Mutation {
