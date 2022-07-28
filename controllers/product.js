@@ -2,9 +2,11 @@ const Product= require ("../models/product");
 const bcryptjs=require("bcryptjs");
 const jwt=require("jsonwebtoken");
 
-async function getProductsByStatus(status){
+async function getProductsByStatus(status,skip,limit){
    const products = await Product.find()
    .where({status})
+   .skip(skip)
+   .limit(limit)  
    .sort({createdAt: -1})
    ;
    return products;
