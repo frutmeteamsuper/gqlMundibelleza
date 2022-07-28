@@ -13,12 +13,12 @@ async function getProductsByStatus(status){
 async function newProduct(input){
     const newProduct = input;
     const { 
-        client, 
-        destin, 
-        rorigin, 
-        amount,
-        distance, 
-        rateType, 
+        name, 
+        description, 
+        price, 
+        ref,
+        presentation, 
+        category, 
         currency, 
         status
     }=newProduct;
