@@ -5,8 +5,8 @@ const jwt=require("jsonwebtoken");
 async function getProductsByStatus(status,offset,limit){
    const products = await Product.find()
    .where({status})
-   .offset({offset})
-   .limit({limit})
+.offset(offset)
+   .limit(limit)
    .sort({createdAt: -1})
    ;
    return products;
