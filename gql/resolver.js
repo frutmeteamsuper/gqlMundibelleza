@@ -9,7 +9,7 @@ const resolvers = {
 			console.log("Obteniendo usuario");
 			return null;
 		},
-		getProductsByStatus: (_,{status},{offset},{limit}) =>productController.getProductsByStatus(status,offset,limit),
+		getProductsByStatus: (_,{status,offset,limit}) =>productController.getProductsByStatus(status,offset,limit),
 		getTravelsByStatus: (_,{status}) =>travelController.getTravelsByStatus(status),
 		getTixsByStatus: (_,{status}) =>tixController.getTixsByStatus(status),
 	},
