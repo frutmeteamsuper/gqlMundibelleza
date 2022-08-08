@@ -7,7 +7,9 @@ async function getProductsByStatus(status,skip,limit){
    .where({status})
    .skip(skip)
    .limit(limit)  
-   .sort({createdAt: -1})
+   .sort({
+        name: 'asc'
+    })
    ;
    return products;
 }
