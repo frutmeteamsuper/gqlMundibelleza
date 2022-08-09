@@ -2,6 +2,7 @@ const userController= require("../controllers/user");
 const travelController= require("../controllers/travel");
 const tixController= require("../controllers/tix");
 const productController= require("../controllers/product");
+const categoryController= require("../controllers/category");
 const { NoUnusedVariablesRule } = require("graphql");
 const resolvers = {
 	Query:{
@@ -10,6 +11,7 @@ const resolvers = {
 			return null;
 		},
 		getProductsByStatus: (_,{status,skip,limit}) =>productController.getProductsByStatus(status,skip,limit),
+		getCategories: (_,{status,skip,limit}) =>categoryController.getCategories(status,skip,limit),
 		getTravelsByStatus: (_,{status}) =>travelController.getTravelsByStatus(status),
 		getTixsByStatus: (_,{status}) =>tixController.getTixsByStatus(status),
 	},

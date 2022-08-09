@@ -12,6 +12,19 @@ const typeDefs = gql`
 		rateType: String
 		currency: String
 	}	
+	type Subs {
+		id: ID
+		name: String
+		idsub: String
+		idcategory: String
+	}	
+	type Category {
+		id: ID
+		name: String
+		idecategory: String
+		status: String
+		subs: [Subs]
+	}		
 	type Tix {
 		id: ID
 		client: String
@@ -104,6 +117,7 @@ const typeDefs = gql`
 		# user
 		getUser: User 
 		getTravelsByStatus(status:String!): [Travel] 
+		getCategories(status:String!,skip:Int,limit:Int): [Category] 
 		getTixsByStatus(status:String!): [Tix] 
 		getProductsByStatus(status:String!,skip:Int,limit:Int): [Product] 
 	}
