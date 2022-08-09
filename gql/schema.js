@@ -13,7 +13,6 @@ const typeDefs = gql`
 		currency: String
 	}	
 	type Subs {
-		id: ID
 		name: String
 		idsub: String
 		idcategory: String
@@ -21,7 +20,7 @@ const typeDefs = gql`
 	type Category {
 		id: ID
 		name: String
-		idecategory: String
+		idcategory: String
 		status: String
 		subs: [Subs]
 	}		
