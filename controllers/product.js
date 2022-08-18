@@ -13,6 +13,17 @@ async function getProductsByStatus(status,skip,limit){
    ;
    return products;
 }
+async function getBestseller(status,skip,limit){
+    const products = await Product.find()
+    .where({status})
+    .skip(skip)
+    .limit(limit)  
+    .sort({
+         name: 'asc'
+     })
+    ;
+    return products;
+ }
 
 async function newProduct(input){
     const newProduct = input;
@@ -41,4 +52,5 @@ async function newProduct(input){
 module.exports={
     newProduct,
     getProductsByStatus,
+    getBestseller,
 };
