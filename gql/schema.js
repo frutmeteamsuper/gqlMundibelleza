@@ -120,6 +120,7 @@ const typeDefs = gql`
 		getTixsByStatus(status:String!): [Tix] 
 		getProductsByStatus(status:String!,skip:Int,limit:Int): [Product] 
 		getBestseller(status:String!,skip:Int,limit:Int): [Product] 
+		getDiscount(status:String!,skip:Int,limit:Int): [Product] 
 
 	}
 	
