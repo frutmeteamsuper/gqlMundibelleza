@@ -38,6 +38,12 @@ const ProductSchema= Schema({
     images:{
         type:[String],
     },
+    discount:{
+        type:Boolean,
+    },
+    bestseller:{
+        type:Boolean,
+    },
     createdAt:{
         type:Date,
         default:Date.now(),

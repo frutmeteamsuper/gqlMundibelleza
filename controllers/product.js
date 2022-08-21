@@ -14,9 +14,9 @@ async function getProductsByStatus(status,skip,limit){
    return products;
 }
 
-async function getBestseller(status,skip,limit){
+async function getBestseller(bestseller,skip,limit){
     const products = await Product.find()
-    .where({status})
+    .where({bestseller})
     .skip(skip)
     .limit(limit)  
     .sort({
@@ -25,9 +25,9 @@ async function getBestseller(status,skip,limit){
     ;
     return products;
  }
- async function getDiscount(status,skip,limit){
+ async function getDiscount(discount,skip,limit){
     const products = await Product.find()
-    .where({status})
+    .where({discount})
     .skip(skip)
     .limit(limit)  
     .sort({
@@ -48,6 +48,8 @@ async function newProduct(input){
         category, 
         currency, 
         status,
+        discount,
+        bestseller,
         images
     }=newProduct;
 

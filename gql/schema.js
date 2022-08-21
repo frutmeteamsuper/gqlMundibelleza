@@ -47,6 +47,8 @@ const typeDefs = gql`
 		category: String
 		status: String
 		currency: String
+		discount: Boolean
+		bestseller: Boolean
 		images:[String]
 	}	
 	type User {
@@ -87,6 +89,8 @@ const typeDefs = gql`
 		category:String!
 		status:String!
 		currency:String!
+		discount:Boolean!
+		bestseller:Boolean!
 	}
 	input TixInput{
 		client:String!
@@ -119,8 +123,8 @@ const typeDefs = gql`
 		getCategories(status:String!,skip:Int,limit:Int): [Category] 
 		getTixsByStatus(status:String!): [Tix] 
 		getProductsByStatus(status:String!,skip:Int,limit:Int): [Product] 
-		getBestseller(status:String!,skip:Int,limit:Int): [Product] 
-		getDiscount(status:String!,skip:Int,limit:Int): [Product] 
+		getBestseller(bestseller:Boolean!,skip:Int,limit:Int): [Product] 
+		getDiscount(discount:Boolean!,skip:Int,limit:Int): [Product] 
 
 	}
 	
