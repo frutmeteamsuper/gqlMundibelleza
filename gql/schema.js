@@ -43,7 +43,7 @@ const typeDefs = gql`
 		price: Int
 		ref: String 
 		description: String
-		presentation: Stringquantity
+		presentation: String
 		category: String
 		status: String
 		currency: String
@@ -102,7 +102,8 @@ const typeDefs = gql`
 		currency:String!
 		rateType:String!
 	}
-		input UserInput{
+
+	input UserInput{
 		name:String!
 		username:String!
 		email:String!
@@ -112,9 +113,11 @@ const typeDefs = gql`
 	input LoginInput{
 		email:String!
 		password:String!
-	}	
+		
+	}
+	
 	type Query {
-		# user	
+		# user
 		getUser: User 
 		getTravelsByStatus(status:String!): [Travel] 
 		getCategories(status:String!,skip:Int,limit:Int): [Category] 
@@ -122,7 +125,9 @@ const typeDefs = gql`
 		getProductsByStatus(status:String!,skip:Int,limit:Int): [Product] 
 		getBestseller(bestseller:Boolean!,skip:Int,limit:Int): [Product] 
 		getDiscount(discount:Boolean!,skip:Int,limit:Int): [Product] 
+
 	}
+	
 	type Mutation {
 		newTravel(input:TravelInput):Travel
 	}
@@ -132,6 +137,7 @@ const typeDefs = gql`
 	type Mutation {
 		newTix(input:TixInput):Tix
 	}
+
 	type Mutation {
 		register(input:UserInput):User
 	}
@@ -146,3 +152,4 @@ const typeDefs = gql`
 `;
 
 module.exports=typeDefs;
+
