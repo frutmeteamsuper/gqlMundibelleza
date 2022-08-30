@@ -18,7 +18,7 @@ const resolvers = {
 		getTixsByStatus: (_,{status}) =>tixController.getTixsByStatus(status),
 	},
 	Mutation:{
-		//user 
+		//user extnsion decomentario
 		newProduct:(_,{input})=> productController.newProduct(input),
 		newTix:(_,{input})=> tixController.newTix(input),
 		newTravel:(_,{input})=> travelController.newTravel(input),
