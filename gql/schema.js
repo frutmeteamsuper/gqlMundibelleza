@@ -102,8 +102,7 @@ const typeDefs = gql`
 		currency:String!
 		rateType:String!
 	}
-
-	input UserInput{
+		input UserInput{
 		name:String!
 		username:String!
 		email:String!
@@ -113,9 +112,7 @@ const typeDefs = gql`
 	input LoginInput{
 		email:String!
 		password:String!
-		
-	}
-	
+	}	
 	type Query {
 		# user	
 		getUser: User 
@@ -125,9 +122,7 @@ const typeDefs = gql`
 		getProductsByStatus(status:String!,skip:Int,limit:Int): [Product] 
 		getBestseller(bestseller:Boolean!,skip:Int,limit:Int): [Product] 
 		getDiscount(discount:Boolean!,skip:Int,limit:Int): [Product] 
-
 	}
-	
 	type Mutation {
 		newTravel(input:TravelInput):Travel
 	}
