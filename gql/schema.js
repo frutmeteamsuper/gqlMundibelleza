@@ -43,7 +43,7 @@ const typeDefs = gql`
 		price: Int
 		ref: String 
 		description: String
-		presentation: String
+		presentation: Stringquantity
 		category: String
 		status: String
 		currency: String
@@ -144,6 +144,13 @@ const typeDefs = gql`
 	type Mutation {
 		login(input:LoginInput):Token
 	}
+	type Query($productFilter:productFilter){
+		allProducts(filter:$productFilter){
+		  id
+		  name
+		  price
+		}
+	  }
 	enum UserRoleEnum {
 		ADMIN
 		ACCOUNTANT
