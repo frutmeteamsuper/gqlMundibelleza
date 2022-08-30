@@ -68,6 +68,7 @@ const typeDefs = gql`
 	}
 	type Query {
 		user(id: ID!): User
+		product(id: ID!) Product
 		users(role: UserRoleEnum): [User!]!
 	  }
 	input TravelInput{
@@ -119,6 +120,7 @@ const typeDefs = gql`
 	type Query {
 		# user
 		getUser: User 
+		getProduct: Product
 		getTravelsByStatus(status:String!): [Travel] 
 		getCategories(status:String!,skip:Int,limit:Int): [Category] 
 		getTixsByStatus(status:String!): [Tix] 
@@ -144,13 +146,7 @@ const typeDefs = gql`
 	type Mutation {
 		login(input:LoginInput):Token
 	}
-	type Query ($productFilter:productFilter){
-		allProducts(filter:$productFilter){
-		  id
-		  name
-		  price
-		}
-	  }
+
 	enum UserRoleEnum {
 		ADMIN
 		ACCOUNTANT
