@@ -68,7 +68,6 @@ const typeDefs = gql`
 	}
 	type Query {
 		user(id: ID!): User
-		product(id: ID!): Product
 		users(role: UserRoleEnum): [User!]!
 	  }
 	input TravelInput{
@@ -111,7 +110,7 @@ const typeDefs = gql`
 		password:String!
 		role: UserRoleEnum = ACCOUNTANT
 	}
-	input LoginInput{getUser
+	input LoginInput{
 		email:String!
 		password:String!
 		
@@ -120,7 +119,6 @@ const typeDefs = gql`
 	type Query {
 		# user
 		getUser: User 
-		getProduct: Product
 		getTravelsByStatus(status:String!): [Travel] 
 		getCategories(status:String!,skip:Int,limit:Int): [Category] 
 		getTixsByStatus(status:String!): [Tix] 
