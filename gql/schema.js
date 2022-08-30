@@ -144,7 +144,7 @@ const typeDefs = gql`
 	type Mutation {
 		login(input:LoginInput):Token
 	}
-	type Query($productFilter:productFilter){
+	type Query ($productFilter:productFilter){
 		allProducts(filter:$productFilter){
 		  id
 		  name
