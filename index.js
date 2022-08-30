@@ -9,7 +9,7 @@ const { ApolloServerPluginLandingPageGraphQLPlayground } = require('apollo-serve
 //import { ApolloServer } from "apollo-server";
 //import {  ApolloServerPluginLandingPageGraphQLPlayground} from "apollo-server-core";
 require ("dotenv").config({path:".env"});
-
+//comentary
 mongoose.connect(process.env.BBDD,
     {
         useNewUrlParser: true,
