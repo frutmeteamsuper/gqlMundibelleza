@@ -9,8 +9,7 @@ const resolvers = {
 		getUser:()=>{
 			console.log("Obteniendo usuario");
 			return null;
-		},
-	
+		},	
 		getProductsByStatus: (_,{status,skip,limit}) =>productController.getProductsByStatus(status,skip,limit),
 		getBestseller: (_,{bestseller,skip,limit}) =>productController.getBestseller(bestseller,skip,limit),
 		getDiscount: (_,{discount,skip,limit}) =>productController.getDiscount(discount,skip,limit),

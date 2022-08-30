@@ -137,14 +137,12 @@ const typeDefs = gql`
 	type Mutation {
 		newTix(input:TixInput):Tix
 	}
-
 	type Mutation {
 		register(input:UserInput):User
 	}
 	type Mutation {
 		login(input:LoginInput):Token
 	}
-
 	enum UserRoleEnum {
 		ADMIN
 		ACCOUNTANT
