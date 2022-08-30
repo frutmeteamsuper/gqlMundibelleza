@@ -117,7 +117,13 @@ const typeDefs = gql`
 	}
 	
 	type Query {
-		# user
+		# user	type Query($productFilter:productFilter){
+			allProducts(filter:$productFilter){
+			  id
+			  name
+			  price
+			}
+		  }
 		getUser: User 
 		getTravelsByStatus(status:String!): [Travel] 
 		getCategories(status:String!,skip:Int,limit:Int): [Category] 

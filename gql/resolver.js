@@ -13,7 +13,6 @@ const resolvers = {
 		getProductsByStatus: (_,{status,skip,limit}) =>productController.getProductsByStatus(status,skip,limit),
 		getBestseller: (_,{bestseller,skip,limit}) =>productController.getBestseller(bestseller,skip,limit),
 		getDiscount: (_,{discount,skip,limit}) =>productController.getDiscount(discount,skip,limit),
-		
 		getCategories: (_,{status,skip,limit}) =>categoryController.getCategories(status,skip,limit),
 		getTravelsByStatus: (_,{status}) =>travelController.getTravelsByStatus(status),
 		getTixsByStatus: (_,{status}) =>tixController.getTixsByStatus(status),
