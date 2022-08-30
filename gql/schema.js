@@ -68,7 +68,7 @@ const typeDefs = gql`
 	}
 	type Query {
 		user(id: ID!): User
-		product(id: ID!) Product
+		product(id: ID!): Product
 		users(role: UserRoleEnum): [User!]!
 	  }
 	input TravelInput{
@@ -111,7 +111,7 @@ const typeDefs = gql`
 		password:String!
 		role: UserRoleEnum = ACCOUNTANT
 	}
-	input LoginInput{
+	input LoginInput{getUser
 		email:String!
 		password:String!
 		
